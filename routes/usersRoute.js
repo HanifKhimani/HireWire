@@ -29,7 +29,7 @@ router.post("/register", async (req, res) => {
             Your Registered details are:
             Email: ${user.email}
             Password: ${user.password}
-            To verify your email, click the following link: http://localhost:3000/verify/${token}`,
+            To verify your email, click the following link: https://hirewire.onrender.com/verify/${token}`,
 
             html: `<p>Dear User,</p>
             <p>Welcome to Job Portal website! Your account has been successfully registered.</p>
@@ -38,7 +38,7 @@ router.post("/register", async (req, res) => {
             <li>Email: ${user.email}</li>
             <li>Password: ${user.password}</li>
             </ul>
-            <p>To verify your email, click the following link: <a href="http://localhost:3000/verify/${token}">Verify Email</a></p>`,
+            <p>To verify your email, click the following link: <a href="https://hirewire.onrender.com/verify/${token}">Verify Email</a></p>`,
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
