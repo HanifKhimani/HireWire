@@ -21,7 +21,7 @@ router.post("/register", async (req, res) => {
         const user = await newuser.save()
 
         const mailOptions = {
-            from: process.env.AUTH_USER,
+            from: '"HireWirePortal" process.env.AUTH_USER',
             to: user.email,
             subject: "Account Verification",
             text: `Dear User,
